@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS DOM EVENTS</title>
+</head>
+
+<body>
+    <h1 onclick="console.log(43)">DOM Events</h1>
+
+    <button onclick="console.log( 30)"> click me</button>
+
+    <button id="make-white"> click white</button>
+    <button id="make-Green"> click green</button>
+    <button id="make-Blue"> click Blue</button>
+    <button id="make-Yellow"> click Yellow</button>
+
+
+
+
+
+
+    <h2 id="handler-status">Default Text </h2>
+    <button onclick="handleOnclick()">Handle event by add onclick Function</button>
+    <button id="event-listener">Handle Event by add onelink Function</button>
+
+
+    <script>
+        function handleOnclick() {
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Text updated by add Event listener button';
+        }
+
+        document.getElementById('event-listener').addEventListener('click', function () {
+            const handlerStatus = document.getElementById('handler-status');
+            handlerStatus.innerText = 'Text updated by add Event listener button'
+        })
+    </script>
+
+    <script src="js/event.js"></script>
+</body>
+
+</html>
